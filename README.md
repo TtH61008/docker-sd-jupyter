@@ -6,6 +6,10 @@
 - dockerのインストール
   - docker-desktopをインストールしておくでもよい
 ```bash
+# ubuntuの場合
+# aptの行き先を国内に向ける
+$ sudo sed -i.bak -e "s/http:\/\/archive\.ubuntu\.com/http:\/\/jp\.archive\.ubuntu\.com/g" /etc/apt/sources.list
+
 $ sudo apt-get update
 $ sudo apt-get install \
     apt-transport-https \
