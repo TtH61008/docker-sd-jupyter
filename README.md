@@ -31,7 +31,7 @@ $ docker build -t diffusers-lab ./
 # GPU無
 $ docker run -it --rm -v ~/diffusers-workspace:/workspace -p 8888:8888 --name pytorch diffusers-lab jupyter lab --ip 0.0.0.0 --allow-root
 # GPU有
-$ docker run -d --rm --gpus all -v ~/diffusers-workspace:/workspace -p 8888:8888 --name pytorch diffusers-lab jupyter lab
+$ docker run -d --rm --gpus all -v ~/diffusers-workspace:/workspace -v ~/.cache/huggingface:~/.cache/huggingface -p 8888:8888 --name pytorch diffusers-lab jupyter lab
 # containerのpidが表示される
 $ docker logs $PID
 # tokenが表示されるのでlocalhost:8888に接続してログインに使う
