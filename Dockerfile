@@ -22,3 +22,5 @@ RUN jupyter serverextension enable --py jupyter_http_over_ws
 
 # COPY super_simple_stable_diffusion.ipynb /workspace/
 COPY jupyter_notebook_config.py /root/.jupyter/
+COPY sed_filter.py /workspace/
+RUN python3 sed_filter.py /opt/conda/lib/python3.7/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py
